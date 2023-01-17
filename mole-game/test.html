@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+  </body>
+  <script>
+    //그림판
+    /** @type {HTMLCanvasElement} */
+    const myCanvas = document.getElementById("myCanvas");
+    myCanvas.width = 500;
+    myCanvas.height = 300;
+    myCanvas.style.backgroundColor = "#F6F6F6";
+
+    // 그림 그리는 역할
+    /** @type {CanvasRenderingContext2D} */
+    const context = myCanvas.getContext("2d");
+
+    //도형 그리기 시작
+    context.beginPath();
+    //동그라미
+    context.arc(50, 50, 50, 0, 2 * Math.PI);
+    //색상 넣기
+    context.fillStyle = "#CBF1F5";
+    //그리기 완료
+    context.fill();
+
+    context.fillStyle = "#A6E3E9"; //fillstyle = 물감
+    context.fillRect(200, 50, 100, 50);
+
+    // 글쓰기
+    context.fillStyle = "pink";
+    context.font = "30px Arial";
+    context.fillText("안녕하세요구르트", 200, 30);
+  </script>
+</html>
