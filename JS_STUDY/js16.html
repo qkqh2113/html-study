@@ -17,10 +17,9 @@
     ></script>
     <title>Document</title>
   </head>
-
   <body>
     <div>
-      <p>메시지: <span id="message"> </span></p>
+      <p>메시지: <span id="message"></span></p>
     </div>
     <!-- Button trigger modal -->
     <button
@@ -55,6 +54,7 @@
             <div class="input-group mb-3">
               <span class="input-group-text" id="basic-addon1">메시지</span>
               <input
+                id="messageInput"
                 type="text"
                 class="form-control"
                 placeholder="입력하세요"
@@ -71,7 +71,9 @@
             >
               취소
             </button>
-            <button type="messageBtn" class="btn btn-primary">입력</button>
+            <button id="messageBtn" type="button" class="btn btn-primary">
+              입력
+            </button>
           </div>
         </div>
       </div>
